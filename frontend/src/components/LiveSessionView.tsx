@@ -305,12 +305,13 @@ export function LiveSessionView({
     setIsProcessing(true);
 
     try {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "/api";
       const formData = new FormData();
       formData.append("text", segmentText);
       formData.append("chunk_duration", "3.5");
       formData.append("stt_source", "live_speech");
 
-      const res = await fetch(`http://127.0.0.1:8000/api/sessions/${currentSessionId}/segment`, {
+      const res = await fetch(`${apiUrl}/sessions/${currentSessionId}/segment`, {
         method: "POST",
         body: formData,
       });
@@ -327,11 +328,12 @@ export function LiveSessionView({
   // ── Step 3: Send Audio Chunk to Backend (Whisper API) ──────────────────────
   const sendAudioChunk = async (currentSessionId: string, audioBlob: Blob) => {
     try {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "/api";
       const formData = new FormData();
       formData.append("audio", audioBlob, "chunk.webm");
       formData.append("chunk_duration", "4.0");
 
-      const res = await fetch(`http://127.0.0.1:8000/api/sessions/${currentSessionId}/chunk`, {
+      const res = await fetch(`${apiUrl}/sessions/${currentSessionId}/chunk`, {
         method: "POST",
         body: formData,
       });
