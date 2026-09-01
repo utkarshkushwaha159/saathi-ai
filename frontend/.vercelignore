@@ -1,0 +1,5 @@
+backend/
+docs/
+.git/
+.env.example
+README.md

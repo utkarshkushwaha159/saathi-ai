@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Canvas & Surface */
+    --color-canvas: #FFFFFF;
+    --color-surface: #FFFFFF;
+    --color-border: #E8EAEE;
+
+    /* Typography */
+    --color-text-primary: #1F2430;
+    --color-text-secondary: #66707A;
+    --color-text-muted: #8A8F98;
+
+    /* Primary Dark Action */
+    --color-dark-action: #1F2430;
+
+    /* Semantic & AI Accent Colors */
+    --color-accent: #0E7C7B;
+    --color-accent-tint: #F1FBFA;
+    --color-accent-border: #D0F2EE;
+
+    --color-critical: #B23A3A;
+    --color-critical-tint: #FCEEEE;
+    --color-critical-border: #F8D7D7;
+
+    --color-warning: #A6650F;
+    --color-warning-tint: #FBF1E1;
+    --color-warning-border: #F5E2C4;
+
+    --color-success: #2F855A;
+    --color-success-tint: #E9F7EF;
+    --color-success-border: #C7EBD7;
+  }
+
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-text-primary);
+    font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 14px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@theme {
+  /* Colors */
+  --color-canvas: #FFFFFF;
+  --color-surface: #FFFFFF;
+  --color-border-subtle: #E8EAEE;
+
+  --color-text-primary: #1F2430;
+  --color-text-secondary: #66707A;
+  --color-text-muted: #8A8F98;
+
+  --color-dark-action: #1F2430;
+
+  --color-accent: #0E7C7B;
+  --color-accent-tint: #F1FBFA;
+  --color-accent-border: #D0F2EE;
+
+  --color-critical: #B23A3A;
+  --color-critical-tint: #FCEEEE;
+  --color-critical-border: #F8D7D7;
+
+  --color-warning: #A6650F;
+  --color-warning-tint: #FBF1E1;
+  --color-warning-border: #F5E2C4;
+
+  --color-success: #2F855A;
+  --color-success-tint: #E9F7EF;
+  --color-success-border: #C7EBD7;
+
+  /* Border Radii */
+  --radius-card: 16px;
+  --radius-button: 11px;
+  --radius-pill: 20px;
+}
+
+/* Base utility classes for strict design system */
+.saathi-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E8EAEE;
+  border-radius: 16px;
+}
+
+.saathi-btn-primary {
+  background-color: #1F2430;
+  color: #FFFFFF;
+  border-radius: 11px;
+  font-weight: 500;
+  font-size: 13.5px;
+  transition: opacity 0.15s ease;
+}
+.saathi-btn-primary:hover {
+  opacity: 0.92;
+}
+
+.saathi-btn-secondary {
+  background-color: transparent;
+  color: #1F2430;
+  border: 1px solid #E8EAEE;
+  border-radius: 11px;
+  font-weight: 500;
+  font-size: 13.5px;
+  transition: background-color 0.15s ease;
+}
+.saathi-btn-secondary:hover {
+  background-color: #F8F9FA;
+}
+
+.saathi-btn-accent {
+  background-color: #F1FBFA;
+  color: #0E7C7B;
+  border: 1px solid #D0F2EE;
+  border-radius: 11px;
+  font-weight: 500;
+  font-size: 13.5px;
+  transition: opacity 0.15s ease;
+}
+.saathi-btn-accent:hover {
+  opacity: 0.9;
+}
+
+.saathi-eyebrow {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #8A8F98;
+}
