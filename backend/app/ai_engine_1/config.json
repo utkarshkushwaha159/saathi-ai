@@ -1,0 +1,116 @@
+{
+  "version": "1.2",
+  "description": "SAATHI-AI Engine 1 Indicator Configuration with full bilingual support (Devanagari Hindi, Hinglish, and English).",
+  "svi_config": {
+    "decay_rate": 0.82,
+    "calming_reduction_factor": 0.52,
+    "max_single_chunk_contribution": 70,
+    "smoothing_alpha": 0.78,
+    "baseline_decay_per_chunk": 1.5
+  },
+  "indicator_categories": {
+    "threat_language": {
+      "ui_label": "Distress keywords",
+      "weight": 38,
+      "phrases": [
+        "धमकी", "धमकी दे रहा", "धमकी मिल रही", "धमकी दी", "मार देंगे", "मार देगा", "मार दूंगा", "मार दूंगी", "मारूंगा", "मारूंगी",
+        "जान से मार", "जान से मार दूंगा", "जान से मार देगा", "खत्म कर दूंगा", "हमला", "हमला किया", "खतरा", "खतरे में हूं", "खतरे में",
+        "हथियार", "चाकू", "गन", "बंदूक", "पिस्तौल", "गाली", "जबरदस्ती", "हाथापाई", "चोट", "खून",
+        "dhamki", "dhamki mil rahi", "dhamki de raha", "maar denge", "marunga", "marungi",
+        "jaan se maarne", "jan se maar", "jaan se maar dunga", "khatam kar dunga",
+        "threat", "threaten", "threatened", "will kill", "will hurt", "going to hurt",
+        "attack", "attacking", "hamla", "khatre mein hoon", "khatra hai", "danger",
+        "hathiyar", "gun", "chaku", "knife", "pistol", "violence", "abuse"
+      ],
+      "calming_phrases": []
+    },
+    "fear_distress": {
+      "ui_label": "Voice tone",
+      "weight": 34,
+      "phrases": [
+        "डर", "डर लग रहा", "डर लग रहा है", "बहुत डर", "बहुत डर लग रहा", "घबरा", "घबराहट", "घबरा रहा हूं", "घबरा रही हूं",
+        "बचाओ", "मदद करो", "मदद", "प्लीज मदद", "प्लीज हेल्प", "सहायता", "रो रहा हूं", "रो रही हूं", "चीख", "पैनिक", "कांप रहा हूं", "कांप रही हूं",
+        "darr", "dar raha hoon", "dar rahi hoon", "darna", "bahut darr", "bohot darr", "bahut dar",
+        "scared", "afraid", "terrified", "petrified", "panic",
+        "ghabra", "ghabrana", "ghabra raha hoon", "ghabra rahi hoon",
+        "help me", "bachao", "madad karo", "please help", "save me",
+        "rona", "ro raha hoon", "ro rahi hoon", "crying", "screaming", "please"
+      ],
+      "calming_phrases": [
+        "सुरक्षित हूं", "अब ठीक हूं", "सब ठीक है", "ठीक हूं", "अब सुरक्षित हूं", "डर नहीं लग रहा",
+        "पुलिस आ गई", "पुलिस आ गए", "मदद आ गई", "लोग आ गए", "शुक्रिया", "धन्यवाद", "राहत",
+        "safe hoon", "ab thik hoon", "ab safe hoon", "main safe hoon",
+        "ab darr nahi", "darr nahi lag raha", "theek hoon", "ab aacha hoon",
+        "police aa gayi", "police aagayi", "police aaya", "police aa gaye",
+        "madad aa gayi", "help aa gayi", "log aa gaye", "shukriya",
+        "thank you", "thanks", "relief", "ab theek hai", "sab theek hai",
+        "i am safe", "safe now"
+      ]
+    },
+    "immediate_safety": {
+      "ui_label": "Isolation signal",
+      "weight": 36,
+      "phrases": [
+        "बाहर है", "घर के बाहर", "घर के बाahar", "दरवाजे के बाहर", "गेट के बाहर", "आ रहा है", "आ रही है",
+        "अंदर आ गया", "अंदर घुस गया", "घुस आया", "घुस रहा है", "दरवाजा तोड़", "पीछा कर रहा", "पीछा कर रही", "पीछा",
+        "अभी मेरे पास", "पास आ रहा", "दरवाजे पर", "घर पर आ गया",
+        "bahar hai", "ghar ke bahar", "ghar ke baahar", "aane wala hai",
+        "aa raha hai", "aa rahi hai", "andar aa gaya", "andar aa raha",
+        "ghus aaya", "ghus raha", "break in", "break-in", "toot ke andar",
+        "chasing", "peecha kar raha", "peecha", "abhi aa raha hai",
+        "abhi mere paas", "gaate ke bahar", "gate ke bahar", "darwaze ke bahar",
+        "outside my house", "outside my door", "near my house"
+      ],
+      "calming_phrases": [
+        "चला गया", "चली गई", "निकल गया", "निकल गई", "दूर हो गया", "भाग गया", "दूर है अब",
+        "chala gaya", "chali gayi", "nikal gaya", "nikal gayi", "gone now",
+        "they left", "woh chale gaye", "door ho gaya", "gaya", "door hai ab"
+      ]
+    },
+    "isolation_language": {
+      "ui_label": "Isolation signal",
+      "weight": 28,
+      "phrases": [
+        "अकेला", "अकेली", "बिल्कुल अकेला", "बिल्कुल अकेली", "कोई नहीं", "घर में कोई नहीं", "घर पर कोई नहीं", "मेरे साथ कोई नहीं", "खाली घर", "अकेले हैं", "अकेले",
+        "akela", "akeli", "alone", "bilkul akela", "bilkul akeli",
+        "koi nahi", "ghar mein koi nahi", "khali घर", "khali ghar",
+        "nobody here", "no one home", "no one with me", "by myself",
+        "ghar par koi nahi", "mere saath koi nahi"
+      ],
+      "calming_phrases": [
+        "मेरे साथ हैं", "परिवार आ गया", "पड़ोसी आ गए", "दोस्त आ गया", "लोग आ गए", "कोई आ गया", "अब अकेली नहीं", "अब अकेला नहीं",
+        "mere saath hain", "saath mein", "family aa gayi", "parivar aa gaya",
+        "log aa gaye", "neighbour", "padosi", "paros wale", "friend aa gaya",
+        "koi aa gaya", "ab akeli nahi", "ab akela nahi"
+      ]
+    }
+  },
+  "speech_pace_config": {
+    "ui_label": "Speech pace",
+    "note": "PROTOTYPE APPROXIMATION: Computed as words-per-chunk-duration. Not prosody analysis.",
+    "slow_wpm_threshold": 60,
+    "normal_wpm_upper": 160,
+    "fast_wpm_threshold": 220,
+    "slow_distress_weight": 15,
+    "fast_panic_weight": 22,
+    "normal_contribution": 0
+  },
+  "copilot_rules": {
+    "LOW": {
+      "suggested_question": "Kripya mujhe apni situation ke baare mein thoda aur bataiyein. Aap kahan hain abhi?",
+      "communication_tip": "Maintain a calm, reassuring tone. Let the caller feel heard before gathering details."
+    },
+    "MODERATE": {
+      "suggested_question": "Kya aap mujhe bata sakte hain ki aapke aas-paas koi aur hai, ya aap akele hain?",
+      "communication_tip": "Acknowledge their concern directly. Confirm their current location and immediate safety."
+    },
+    "HIGH": {
+      "suggested_question": "Kya aap abhi kisi surakshit jagah par ja sakte hain — andar ka kamra, ya kisi padosi ke paas?",
+      "communication_tip": "Prioritize their immediate safety. Keep the caller on the line. Prepare to dispatch police if isolation confirmed."
+    },
+    "CRITICAL": {
+      "suggested_question": "Police dispatch ho rahi hai. Kripya darwaza andar se band karein aur phone par baat karte rahein.",
+      "communication_tip": "CRITICAL URGENCY: Activate emergency dispatch protocol now. Do not end the call. Speak slowly and clearly."
+    }
+  }
+}
