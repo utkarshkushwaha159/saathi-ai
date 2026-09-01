@@ -1,19 +1,6 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
-  "framework": "nextjs",
-  "envPrefix": "NEXT_PUBLIC_",
-  "env": [
-    {
-      "key": "NEXT_PUBLIC_API_URL",
-      "value": "/api"
-    }
-  ],
-  "functions": {
-    "api/**/*.ts": {
-      "maxDuration": 60,
-      "memory": 1024
-    }
-  }
+  "framework": "nextjs"
 }
 
